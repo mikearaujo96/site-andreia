@@ -1,27 +1,26 @@
 const menuSite = `
         <div class="contatos-rapidos">
             <div>
-                <a href="#">
+                <a href="https://www.google.com/maps?q=Rua+Jose+Ferreira+Crespo,+674+-+Jardim+Sao+Vicente+-+São+Paulo" target="_blank">
                     <img src="assets/icones/icon-localizacao.svg" alt="icone-localização">
                     <p>Rua Jose Ferreira Crespo, 674 - Jardim Sao Vicente - São Paulo</p>
                 </a>
-                <a href="">
+                <a href="mailto:contato@institutohandmaria.org" target="_blank">
                     <img src="assets/icones/icon-email.svg" alt="icone-email">
                     <p>contato@institutohandmaria.org</p>
                 </a>
             </div>
             <div class="links-contatos-rapidos-redesociais">
-                <a href=""><img src="assets/icones/icon-facebook.svg" alt="icone-facebook"></a>
-                <a href=""><img src="assets/icones/icon-instagram.svg" alt="icone-instagram"></a>
-                <a href=""><img src="assets/icones/icon-youtube.svg" alt="icone-youtube"></a>
-                <a href=""><img src="assets/icones/icon-whatsapp.svg" alt="icone-whatsapp"></a>
+                <a href="https://web.facebook.com/icehandmaria" target="_blank"><img src="assets/icones/icon-facebook.svg" alt="icone-facebook"></a>
+                <a href="https://www.instagram.com/instituto.handmaria/" target="_blank"><img src="assets/icones/icon-instagram.svg" alt="icone-instagram"></a>
+                <a href="https://wa.me/5511988404276" target="_blank"><img src="assets/icones/icon-whatsapp.svg" alt="icone-whatsapp"></a>
             </div>
         </div>
 
         <nav class="navigation">
 
             <div class="nav-logo">
-                <a href="https://institutohandmaria.org/">
+                <a href="index.html">
                     <img src="assets/logos/logo-com-fundo.svg" alt="logo site instituto hand maria">
                 </a>
             </div>

@@ -33,7 +33,8 @@
   border-radius: 12px;
   padding: 20px;
   text-align: center;
-  transition: transform .25s ease, box-shadow .25s ease;
+  transition: transform .25s ease, box-shadow .25s ease, opacity .6s;
+  opacity: 0;
 }
 .mvv-card:hover {
   transform: translateY(-4px);
@@ -66,6 +67,99 @@
   color: #333;
 }
 
+/* Áreas de atuação */
+.atuacao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px 30px;
+  border-radius: 16px;
+  margin-bottom: 50px;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity .8s ease, transform .8s ease;
+}
+.atuacao-col {
+  flex: 1;
+}
+.atuacao-col.texto h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  transition: transform .6s ease, opacity .6s ease;
+}
+
+/* estado inicial escondido */
+.titulo-animado {
+  display: inline-block;
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+/* estado ativo */
+.reveal .titulo-animado {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.atuacao-col.texto p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+.atuacao-col.icone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.atuacao-col.icone span {
+  font-size: 120px;
+  opacity: 0.9;
+}
+
+/* Cores diferentes para cada área */
+.atuacao-educacao {
+  background: linear-gradient(135deg, #003c78, #0055a4);
+}
+.atuacao-esporte {
+  background: linear-gradient(135deg, #ffcc00, #ffb300);
+  color: #003c78;
+}
+.atuacao-cultura {
+  background: linear-gradient(135deg, #8e44ad, #9b59b6);
+}
+
+/* Animação títulos */
+.titulo-animado {
+  position: relative;
+  display: inline-block;
+}
+.titulo-animado::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 4px;
+  background: currentColor;
+  transition: width .6s ease;
+}
+
+/* Estado ativo */
+.reveal {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+.reveal .titulo-animado {
+  opacity: 1;
+  transform: scale(1);
+}
+.reveal .titulo-animado::after {
+  width: 100%;
+}
+
 /* Equipe */
 .equipe h2 {
   margin-bottom: 20px;
@@ -83,7 +177,9 @@
   border: 1px solid #e5edf6;
   border-radius: 12px;
   padding: 15px;
-  transition: transform .25s ease, box-shadow .25s ease;
+  transition: transform .25s ease, box-shadow .25s ease, opacity .6s;
+  opacity: 0;
+  transform: translateY(30px);
 }
 .equipe-card:hover {
   transform: translateY(-4px);
@@ -105,4 +201,16 @@
 .equipe-card p {
   font-size: 14px;
   color: #555;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .atuacao {
+    flex-direction: column;
+    text-align: center;
+  }
+  .atuacao-col.icone span {
+    font-size: 80px;
+    margin-top: 20px;
+  }
 }

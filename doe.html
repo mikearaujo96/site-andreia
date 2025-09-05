@@ -54,6 +54,24 @@
                         <p>Ajude mensalmente e mantenha nossos projetos vivos.</p>
                         <button class="btn-doar">Contribuir</button>
                     </div>
+                    <div class="opcao-card">
+                        <span class="material-symbols-outlined">handshake</span>
+                        <h3>Parcerias Institucionais</h3>
+                        <p>Empresas e instituições podem apoiar nossos projetos e ampliar seu impacto social.</p>
+                        <button class="btn-doar">Seja Parceiro</button>
+                    </div>
+                    <div class="opcao-card">
+                        <span class="material-symbols-outlined">groups</span>
+                        <h3>Voluntariado</h3>
+                        <p>Doe seu tempo e conhecimento, participando diretamente dos nossos projetos.</p>
+                        <button class="btn-doar">Quero Ser Voluntário</button>
+                    </div>
+                    <div class="opcao-card">
+                        <span class="material-symbols-outlined">redeem</span>
+                        <h3>Doação de Materiais</h3>
+                        <p>Livros, uniformes, instrumentos musicais e equipamentos podem mudar vidas.</p>
+                        <button class="btn-doar">Doar Materiais</button>
+                    </div>
                 </div>
             </section>
 
@@ -80,7 +98,7 @@
             <!-- Formulário -->
             <section class="doacoes-form">
                 <h2>Envie seus dados</h2>
-                <form id="form-doacao">
+                <form id="form-doacao" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="nome">Nome Completo</label>
                         <input type="text" id="nome" required>
@@ -90,8 +108,20 @@
                         <input type="email" id="email" required>
                     </div>
                     <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" placeholder="(99) 99999-9999" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cpfcnpj">CPF/CNPJ</label>
+                        <input type="text" id="cpfcnpj" placeholder="000.000.000-00" required>
+                    </div>
+                    <div class="form-group">
                         <label for="valor">Valor da Doação (R$)</label>
-                        <input type="number" id="valor" required min="5">
+                        <input type="text" id="valor" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="comprovante">Anexar Comprovante (opcional)</label>
+                        <input type="file" id="comprovante" accept="image/*,.pdf">
                     </div>
                     <button type="submit" class="btn-enviar">Enviar Doação</button>
                 </form>
