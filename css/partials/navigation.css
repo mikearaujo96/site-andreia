@@ -4,21 +4,21 @@ header {
     position: fixed;
     top: 0;
     z-index: 99;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .15);
 }
 
 /* ===== Contatos rápidos ===== */
 .contatos-rapidos {
     width: 100%;
     height: 50px;
-    background-color: #003c78;
+    background: #003c78;
     color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 10%;
     overflow: hidden;
-    transition: height 0.3s ease;
+    transition: height .3s ease;
 }
 
 .contatos-rapidos.oculto {
@@ -39,10 +39,9 @@ header {
 }
 
 .contatos-rapidos div a p {
-    font-size: 0.8rem;
+    font-size: .8rem;
     color: #fff;
 }
-
 
 .contatos-rapidos div a img {
     width: 24px;
@@ -50,21 +49,20 @@ header {
 
 .contatos-rapidos .links-contatos-rapidos-redesociais a img:hover {
     transform: scale(1.2);
-    transition: all 0.2s linear;
+    transition: all .2s linear;
 }
 
 /* ===== Navegação ===== */
 .navigation {
     width: 100%;
     height: 90px;
-    background-color: #fff;
+    background: #fff;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    transition: top 0.3s ease;
+    transition: top .3s ease;
 }
 
-/* Logo */
 .nav-logo img {
     max-height: 70px;
 }
@@ -76,7 +74,8 @@ header {
     gap: 20px;
     position: relative;
     height: 100%;
-    overflow: hidden;
+    overflow: visible;
+    /* <<< importante p/ submenu não ser cortado */
 }
 
 .nav-links .fechar-menu {
@@ -91,21 +90,21 @@ header {
     height: 100%;
     display: flex;
     align-items: center;
-    transition: transform 0.2s linear;
+    transition: transform .2s linear;
 }
 
 .nav-links .link-doacoes-menu {
     display: none;
     justify-content: center;
     width: 80%;
-    background-color: #003c78;
+    background: #003c78;
     color: #fff;
     text-decoration: none;
     border-radius: 8px;
     font-weight: 400;
 }
 
-.nav-links a:hover {
+.nav-links .link-fixo:hover {
     transform: translateY(-5px);
 }
 
@@ -122,22 +121,22 @@ header {
     height: 4px;
     background: #ffd200;
     border-radius: 5px;
-    transition: all 0.3s ease;
+    transition: all .3s ease;
 }
 
-/* Botão doação */
+/* Botão doação (desktop) */
 .bt-doacao a {
     padding: 10px 20px;
-    background-color: #003c78;
+    background: #003c78;
     color: #fff;
     text-decoration: none;
     border-radius: 8px;
     font-weight: 400;
-    transition: all 0.2s linear;
+    transition: all .2s linear;
 }
 
 .bt-doacao a:hover {
-    background-color: #fff;
+    background: #fff;
     color: #003c78;
     border: 1px solid #003c78;
     font-weight: 500;
@@ -154,13 +153,105 @@ header {
 .menu-hamburg div {
     width: 25px;
     height: 3px;
-    background-color: #003c78;
+    background: #003c78;
     border-radius: 2px;
 }
 
-/* ===== Responsividade ===== */
-@media screen and (max-width: 900px) {
+/* ===== Submenu ===== */
 
+.submenu-container {
+  position: relative;
+  display: inline-flex;   /* ajusta ao tamanho do conteúdo */
+  align-items: center;
+  height: 100%;
+  white-space: nowrap;    /* evita quebra no texto */
+  width: auto;            /* remove largura fixa */
+}
+
+.submenu-toggle {
+  background: transparent;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  display: inline-flex;   /* botão acompanha conteúdo */
+  align-items: center;
+  gap: 4px;
+  color: #003c78;
+  font-weight: 500;
+  height: 100%;
+  transition: transform .2s linear;
+  width: auto;            /* ocupa só o conteúdo */
+  white-space: nowrap;
+}
+
+
+.submenu-toggle:hover {
+    transform: translateY(-5px);
+}
+
+.submenu-toggle .arrow {
+    transition: transform .25s ease;
+}
+
+.submenu {
+    display: none;
+    /* mostrada quando .open */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
+    padding: 10px 0;
+    min-width: 220px;
+    z-index: 100;
+}
+
+.submenu li {
+    list-style: none;
+}
+
+.submenu li a {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 38px;
+}
+
+.submenu li a span {
+    color: #003c78;
+}
+
+.submenu a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    color: #333;
+    text-decoration: none;
+    transition: background .2s ease;
+}
+
+.submenu a:hover {
+    background: #f5f7fb;
+}
+
+.submenu a.ativo-submenu {
+    font-weight: 600;
+    color: #003c78;
+}
+
+.submenu-container.open .submenu {
+    display: block;
+}
+
+.submenu-container.open .arrow {
+    transform: rotate(90deg);
+}
+
+/* ===== Responsividade ===== */
+@media screen and (max-width:900px) {
     .bt-doacao {
         display: none;
     }
@@ -168,14 +259,18 @@ header {
     .nav-links {
         display: none;
         flex-direction: column;
-        background-color: #fff;
+        background: #fff;
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 400px;
+        height: auto;
         padding: 10px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
+    }
+
+    .nav-links a {
+        padding: 10px;
     }
 
     .nav-links.active {
@@ -185,13 +280,12 @@ header {
     .nav-links .fechar-menu {
         display: flex;
         outline: none;
-        background-color: transparent;
+        background: transparent;
         border: 1px solid #003c78;
         border-radius: 50%;
         padding: 10px;
         align-self: flex-end;
     }
-
 
     .nav-links .link-doacoes-menu {
         display: flex;
@@ -205,21 +299,46 @@ header {
         display: none;
     }
 
-    .nav-links .hover-line {
-        display: none;
-    }
-
-    .nav-links .ativo {
-        position: relative;
-    }
-
+    /* remover underline animado nos links do painel mobile */
     .nav-links .ativo::before {
-        content: "";
-        bottom: 0;
-        left: 0;
         width: 0;
         height: 0;
         background: none;
-        transition: none;
     }
+
+    /* Submenu no mobile: vira bloco interno */
+    .submenu {
+        display: none;
+        position: static;
+        background: transparent;
+        border-radius: none;
+        box-shadow: none;
+        padding: 0;
+        min-width: 300px;
+        z-index: 100;
+        border: none;
+        margin: 0;
+        border: 1px solid #3333335f;
+    }
+
+    .submenu li {
+        display: flex;
+        min-width: 100%;
+        justify-content: space-between;
+        text-align: center;
+        width: 100%;
+        padding: 5px 0;
+    }
+
+    .submenu li a {
+        text-align: center;
+        width: 100%;
+    }
+
+    .submenu-container.open {
+        display: flex;
+        flex-direction: column;
+    }
+
+
 }
