@@ -203,6 +203,43 @@
   color: #555;
 }
 
+/* Estado inicial escondido */
+.sobre-hero h1,
+.sobre-hero p,
+.quem-somos h2,
+.quem-somos p,
+.equipe h2 {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .8s ease, transform .8s ease;
+}
+
+/* Ativo */
+.reveal {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Animação de título com underline */
+.titulo-animado {
+  position: relative;
+  display: inline-block;
+}
+.titulo-animado::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 3px;
+  background: currentColor;
+  transition: width .6s ease;
+}
+.reveal .titulo-animado::after {
+  width: 100%;
+}
+
+
 /* Responsivo */
 @media (max-width: 768px) {
   .atuacao {

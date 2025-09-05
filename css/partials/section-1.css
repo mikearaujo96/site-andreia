@@ -150,6 +150,22 @@
     transform: rotate(-45deg);
 }
 
+/* Animações - Sessão Fazemos */
+.titulo-fazemos h2,
+.titulo-fazemos div p,
+.titulo-fazemos .btn,
+.cards-fazemos .card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity .8s ease, transform .8s ease;
+}
+
+.reveal {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+
 /* Responsivo */
 @media (max-width: 992px) {
 
@@ -161,11 +177,13 @@
         justify-content: center;
         align-items: center;
     }
-    .titulo-fazemos h2{
+
+    .titulo-fazemos h2 {
         width: 100%;
         text-align: center;
     }
-    .titulo-fazemos div{
+
+    .titulo-fazemos div {
         width: 100%;
     }
 

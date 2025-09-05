@@ -76,6 +76,22 @@
 
 }
 
+/* Animações - Sessão Impacto */
+.impacto-img img,
+.impacto-conteudo h2,
+.impacto-conteudo p,
+.btn-impacto {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity .8s ease, transform .8s ease;
+}
+
+.reveal {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+
 /* ===== Responsivo ===== */
 @media (max-width: 900px) {
 
