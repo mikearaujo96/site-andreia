@@ -3,7 +3,7 @@ const controls = document.querySelectorAll('.slide-controls button');
 
 let currentIndex = 0;
 let slideInterval;
-const intervalTime = 15000; // 7s
+const intervalTime = 15000; // 15s
 
 // ======================
 // Função de troca
@@ -14,9 +14,11 @@ function showSlide(nextIndex) {
     const currentSlide = slides[currentIndex];
     const nextSlide = slides[nextIndex];
 
+    let diff = nextIndex - currentIndex;
+
     // Prepara próximo slide
     nextSlide.style.transition = "none";
-    nextSlide.style.transform = nextIndex > currentIndex ? "translateX(-100%)" : "translateX(100%)";
+    nextSlide.style.transform = diff > 0 ? "translateX(100%)" : "translateX(-100%)";
     nextSlide.style.zIndex = 2;
 
     requestAnimationFrame(() => {
@@ -31,7 +33,7 @@ function showSlide(nextIndex) {
         // Quando terminar animação
         nextSlide.addEventListener("transitionend", () => {
             currentSlide.classList.remove("active");
-            currentSlide.style.transform = nextIndex > currentIndex ? "translateX(100%)" : "translateX(-100%)";
+            currentSlide.style.transform = diff > 0 ? "translateX(-100%)" : "translateX(100%)";
             currentSlide.style.zIndex = 0;
 
             nextSlide.classList.add("active");
@@ -83,7 +85,7 @@ const banner = document.getElementById("banner");
 
 banner.addEventListener("touchstart", (e) => {
     startX = e.touches[0].clientX;
-    stopSlideShow(); // pausa ao arrastar
+    stopSlideShow();
 });
 
 banner.addEventListener("touchmove", (e) => {
@@ -93,14 +95,14 @@ banner.addEventListener("touchmove", (e) => {
 banner.addEventListener("touchend", () => {
     let diffX = endX - startX;
 
-    if (Math.abs(diffX) > 50) { 
+    if (Math.abs(diffX) > 50) {
         if (diffX < 0) {
-            nextSlideAuto(); // arrastou p/ esquerda → próximo
+            nextSlideAuto();
         } else {
-            prevSlideAuto(); // arrastou p/ direita → anterior
+            prevSlideAuto();
         }
     }
-    startSlideShow(); // retoma o ciclo
+    startSlideShow();
 });
 
 // ======================

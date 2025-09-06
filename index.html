@@ -25,7 +25,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Instituto Hand Maria | Esporte, Cultura e Inclusão">
     <meta name="twitter:description" content="Transformando vidas por meio do esporte, cultura e cidadania.">
-    <meta name="twitter:image" content="https://institutohandmaria.org/imagens/og-image.jpg"> <!-- alterar link -->
+    <meta name="twitter:image" content="https://institutohandmaria.org/assets/images/banner1.png"> <!-- alterar link -->
 
     <!-- Favicon -->
     <link rel="icon" href="/assets/logos/logo-com-fundo.svg" type="image/x-icon">
@@ -33,7 +33,11 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 
+
+
+
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/load.css">
     <script src="js/navMenu.js" defer></script>
     <script src="js/hero.js" defer></script>
     <script src="js/api-posts-home.js" defer></script>
@@ -41,6 +45,7 @@
     <script src="js/form.js" defer></script>
     <script src="js/rodape.js" defer></script>
     <script src="js/animationHome.js" defer></script>
+    <script src="js/load.js" defer></script>
 </head>
 
 <body>
@@ -57,43 +62,40 @@
     <main>
         <!-- Banner -->
         <section class="hero-section">
-
             <div class="banner" id="banner">
-                <div class="slide active">
+
+                <div class="slide slide1 active">
                     <div class="slide-content">
                         <h1>Conheça nossos</h1>
                         <h1>projetos sociais</h1>
-                        <p>Descubra como o Instituto Hand Maria atua em educação, esportes, cultura e inclusão,
-                            levando oportunidades para jovens e adultos.</p>
                         <a href="noticias.html">Saiba mais</a>
                     </div>
                 </div>
-                <div class="slide">
+
+                <div class="slide slide2">
                     <div class="slide-content">
                         <h1>Sua doação</h1>
                         <h1>transforma vidas</h1>
-                        <p>Cada contribuição nos ajuda a continuar promovendo projetos sociais, educacionais e de
-                            inclusão para quem mais precisa.</p>
                         <a href="doe.html">Fazer uma Doação</a>
                     </div>
                 </div>
-                <div class="slide">
+
+                <div class="slide slide3">
                     <div class="slide-content">
                         <h1>Participe dos</h1>
                         <h1>nossos eventos!</h1>
-                        <p>O Instituto Hand Maria promove encontros, palestras e atividades culturais que
-                            transformam vidas e fortalecem a comunidade.</p>
                         <a href="inscricoes.html">Quero Participar</a>
                     </div>
                 </div>
 
                 <div class="slide-controls">
-                    <button class="active" data-index="0">01</button>
-                    <button data-index="1">02</button>
-                    <button data-index="2">03</button>
+                    <button class="active" data-index="0" aria-label="Projetos sociais">01</button>
+                    <button data-index="1" aria-label="Doação">02</button>
+                    <button data-index="2" aria-label="Eventos">03</button>
                 </div>
             </div>
         </section>
+
 
         <!-- Seção Oque fazemos CSS sessão 1 -->
         <section class="section-fazemos">
@@ -104,7 +106,8 @@
                     <h2>ENTENDA O QUE<br> <span>FAZEMOS</span></h2>
                     <div>
                         <p>
-                            No Instituto Hand Maria, promovemos educação, cultura, esporte e inclusão como caminhos para
+                            No Instituto Esportivo e Cultural Hand Maria, promovemos educação, cultura, esporte e
+                            inclusão como caminhos para
                             transformar vidas e fortalecer comunidades.
                             Atuamos criando oportunidades para crianças, jovens e adultos, desenvolvendo projetos que
                             incentivam a aprendizagem, a prática esportiva, a valorização da cultura e a participação
@@ -120,7 +123,7 @@
                 <!-- Cards -->
                 <div class="cards-fazemos">
                     <div class="card">
-                        <img src="assets/images/nosso-impacto.jpg" alt="Educação que transforma">
+                        <img src="assets/images/img-educacao-transforma.png" alt="Educação que transforma">
                         <h3>Educação que transforma</h3>
                         <p>
                             Promovemos cursos, oficinas e atividades que estimulam o aprendizado contínuo, abrindo
@@ -133,7 +136,7 @@
                     </div>
 
                     <div class="card">
-                        <img src="assets/images/nosso-impacto.jpg" alt="Esporte e inclusão">
+                        <img src="assets/images/img-esporte-inclusao.png" alt="Esporte e inclusão">
                         <h3>Esporte e inclusão</h3>
                         <p>
                             O esporte é nossa ferramenta de integração, saúde e cidadania. Acreditamos que cada jogo é
@@ -146,7 +149,7 @@
                     </div>
 
                     <div class="card">
-                        <img src="assets/images/nosso-impacto.jpg" alt="Cultura e comunidade">
+                        <img src="assets/images/img-cultura-comunidade.png" alt="Cultura e comunidade">
                         <h3>Cultura e comunidade</h3>
                         <p>
                             Valorizamos a cultura como forma de expressão e identidade, fortalecendo vínculos e
@@ -166,13 +169,14 @@
             <div class="impacto-container">
                 <!-- Imagem -->
                 <div class="impacto-img">
-                    <img src="assets/images/nosso-impacto.jpg" alt="Criança sorrindo">
+                    <img src="assets/images/img-impacto.jpg" alt="Criança sorrindo">
                 </div>
 
                 <!-- Conteúdo -->
                 <div class="impacto-conteudo">
                     <h2>NOSSO <span>IMPACTO</span></h2>
-                    <p>Anos dedicados à educação, cultura e inclusão.<br>E seguimos firmes...</p>
+                    <p>Anos dedicados à Esporte, Cultura e Inclusão. Nos trouxeram até aqui!<br> E seguimos firmes...
+                    </p>
                     <a href="impacto.html" class="btn-impacto">
                         CONHEÇA O INSTITUTO
                         <span class="material-symbols-outlined">arrow_forward</span>
@@ -187,7 +191,8 @@
                 <!-- Conteúdo -->
                 <div class="apoio-conteudo">
                     <h2>QUERO <span>APOIAR</span></h2>
-                    <p>Para transformar vidas por meio da educação, unimos forças com parceiros comprometidos. Junte-se
+                    <p>Para transformar vidas por meio do esporte, cultura e educação unimos forças com parceiros
+                        comprometidos. Junte-se
                         a nós e faça parte dessa mudança.</p>
                     <a href="quero-apoiar.html" class="btn-apoio">
                         SAIBA MAIS
@@ -196,7 +201,7 @@
                 </div>
                 <!-- Imagem -->
                 <div class="apoio-img">
-                    <img src="assets/images/nosso-impacto.jpg" alt="Criança sorrindo">
+                    <img src="assets/images/img-quero-apoiar.png" alt="Criança sorrindo">
                 </div>
             </div>
         </section>

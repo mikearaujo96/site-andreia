@@ -33,7 +33,9 @@
 .titulo-parceiros div {
   width: 50%;
   text-align: start;
+  padding-top: 10px;
 }
+
 
 .titulo-parceiros div p {
   font-size: 16px;

@@ -1,31 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const counter = document.getElementById("loader-counter");
-  const loader = document.getElementById("loader");
-  const loaderTop = document.querySelector(".loader-top");
-  const loaderBottom = document.querySelector(".loader-bottom");
-
-  let value = 0;
-  const interval = setInterval(() => {
-    value++;
-    counter.textContent = value + "%";
-
-    if (value >= 100) {
-      clearInterval(interval);
-
-      // animação cortina → azul sobe, amarelo desce
-      loaderTop.style.transform = "translateY(-100%)";
-      loaderBottom.style.transform = "translateY(100%)";
-
-      // remover loader depois da transição
-      setTimeout(() => {
-        loader.style.display = "none";
-      }, 1000);
-    }
-  }, 20); // 0% → 100% em ~2s
-});
-
-
-
 // animationHome.js
 document.addEventListener("DOMContentLoaded", () => {
   const elementos = document.querySelectorAll(
