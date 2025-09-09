@@ -32,9 +32,12 @@ const rodapeSite = `
                 <!-- Coluna 3: Contatos -->
                 <div class="rodape-coluna">
                     <h3>Contato</h3>
+                    <p><strong>Telefone:</strong> <a href="tel:+551128932631" target="_blank">(11) 92893-2631</a></p>
                     <p><strong>Telefone:</strong> <a href="tel:+5511988404276" target="_blank">(11) 98840-4276</a></p>
                     <p><strong>E-mail:</strong> <a
                             href="mailto:contato@institutohandmaria.org">contato@institutohandmaria.org</a></p>
+                    <p><strong>E-mail:</strong> <a
+                            href="mailto:institutohandmaria@gmail.com">institutohandmaria@gmail.com</a></p>
                     <p><strong>Endereço:</strong> R. José Ferreira Crespo, 674 - Jardim Sao Vicente São Paulo/SP</p>
                 </div>
 

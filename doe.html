@@ -13,10 +13,12 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/doacoes-popup.css">
 
     <script src="js/navMenu.js" defer></script>
     <script src="js/doacoes.js" defer></script>
     <script src="js/rodape.js" defer></script>
+    <script src="js/doacoes-popup.js" defer></script>
 </head>
 
 <body>
@@ -37,7 +39,7 @@
             <section class="doacoes-opcoes">
                 <h2>Escolha como você quer doar</h2>
                 <div class="opcoes-grid">
-                    <div class="opcao-card">
+                    <div class="opcao-card" onclick="openDoacaoPopup()">
                         <span class="material-symbols-outlined">credit_card</span>
                         <h3>Cartão de Crédito</h3>
                         <p>Contribua de forma prática e rápida.</p>
@@ -49,25 +51,25 @@
                         <p>Faça sua doação diretamente na conta do instituto.</p>
                         <button class="btn-doar" id="btn-pix">Ver Dados</button>
                     </div>
-                    <div class="opcao-card">
+                    <div class="opcao-card" onclick="openDoacaoPopup()">
                         <span class="material-symbols-outlined">volunteer_activism</span>
                         <h3>Doação Recorrente</h3>
                         <p>Ajude mensalmente e mantenha nossos projetos vivos.</p>
                         <button class="btn-doar">Contribuir</button>
                     </div>
-                    <div class="opcao-card">
+                    <div class="opcao-card" onclick="openDoacaoPopup()">
                         <span class="material-symbols-outlined">handshake</span>
                         <h3>Parcerias Institucionais</h3>
                         <p>Empresas e instituições podem apoiar nossos projetos e ampliar seu impacto social.</p>
                         <button class="btn-doar">Seja Parceiro</button>
                     </div>
-                    <div class="opcao-card">
+                    <div class="opcao-card" onclick="openDoacaoPopup()">
                         <span class="material-symbols-outlined">groups</span>
                         <h3>Voluntariado</h3>
                         <p>Doe seu tempo e conhecimento, participando diretamente dos nossos projetos.</p>
                         <button class="btn-doar">Quero Ser Voluntário</button>
                     </div>
-                    <div class="opcao-card">
+                    <div class="opcao-card" onclick="openDoacaoPopup()">
                         <span class="material-symbols-outlined">redeem</span>
                         <h3>Doação de Materiais</h3>
                         <p>Livros, uniformes, instrumentos musicais e equipamentos podem mudar vidas.</p>
@@ -83,12 +85,12 @@
                     <h3>Doação via Pix</h3>
                     <div class="pix-opcoes">
                         <div class="pix-qrcode">
-                            <img src="assets/images/qrcode.png" alt="QR Code Pix">
+                            <img src="assets/doacoes/qrcode-pix.png" alt="QR Code Pix">
                             <p>Escaneie com seu app de banco</p>
                         </div>
                         <div class="pix-chave">
                             <p><strong>Chave Pix:</strong></p>
-                            <input type="text" id="pix-chave" value="contato@institutohandmaria.org" readonly>
+                            <input type="text" id="pix-chave" value="34.731.245/0001-00" readonly>
                             <button id="copiar-chave" class="btn-copiar">Copiar Chave</button>
                             <span id="copiar-msg"></span>
                         </div>

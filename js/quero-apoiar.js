@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const atualizar = () => {
           valor += incremento;
           if (valor > alvo) valor = alvo;
-          contador.textContent = valor.toLocaleString("pt-BR");
+          contador.textContent = "+ " + valor.toLocaleString("pt-BR");
           if (valor < alvo) requestAnimationFrame(atualizar);
         };
         atualizar();

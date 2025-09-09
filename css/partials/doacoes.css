@@ -49,6 +49,9 @@
 }
 
 .opcao-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     background: #fff;
     border: 1px solid #e5edf6;
     border-radius: 12px;
