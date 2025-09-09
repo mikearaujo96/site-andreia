@@ -289,8 +289,12 @@
                         <input type="email" name="email" placeholder="Seu e-mail" required>
                         <input type="tel" name="telefone" placeholder="Telefone/WhatsApp">
                         <textarea name="mensagem" placeholder="Escreva sua mensagem" required></textarea>
-                        <button type="submit">Enviar Mensagem</button>
+                        <!-- Honeypot anti-spam (mesmo name usado no plugin) -->
+                        <input type="text" name="website" autocomplete="off"
+                            style="position:absolute;left:-9999px;opacity:0;width:0;height:0" tabindex="-1">
+                        <button type="submit" id="btn-contato">Enviar Mensagem</button>
                     </form>
+                      <p id="contato-status" aria-live="polite"></p>
                 </div>
 
                 <!-- Informações -->
